@@ -145,20 +145,10 @@
 
       // Info section
       infoEl.innerHTML = `
-        <div class="row"><span class="label">Name:</span> ${name || "International Space Station"}</div>
-        <div class="row"><span class="label">ID:</span> ${id}</div>
-        <div class="row"><span class="label">Latitude:</span> ${latitude.toFixed(4)}°</div>
-        <div class="row"><span class="label">Longitude:</span> ${longitude.toFixed(4)}°</div>
-        <div class="row"><span class="label">Altitude:</span> ${altitude.toFixed(2)} km</div>
-        <div class="row"><span class="label">Velocity:</span> ${velocity.toFixed(2)} km/h</div>
-        <div class="row"><span class="label">Visibility:</span> ${visibility}</div>
-        <div class="row"><span class="label">Timestamp (UTC):</span> ${timeString}</div>
-        <div class="row">
-          <span class="label">View on map:</span>
-          <a href="https://www.google.com/maps/?api=1&guery=${latitude},${longitude}" target="_blank" rel="noreferrer">
-            Open Google Maps
-          </a>
-        </div>
+      <p> The International Space Station (ID: ${id}) is currently located at ${latitude.toFixed(4)}°, ${longitude.toFixed(4)}°, at a altitude of ${altitude.toFixed(2)}. It is travelling at ${velocity.toFixed(2)} and is ${visibility} to observers.</p>
+      <p> You can view the location on Google maps
+      <a href="https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}" target="_blank">here</a>
+      </p>
       `;
 
     // Initial load
@@ -170,3 +160,4 @@
 </body>
 
 </html>
+
